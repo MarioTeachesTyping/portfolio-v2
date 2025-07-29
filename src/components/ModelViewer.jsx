@@ -1,28 +1,34 @@
-// Model Viewer
+// ------------ //
+// Model Viewer //
+// ------------ //
 
 import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, useGLTF } from '@react-three/drei';
+import * as THREE from 'three';
 
-// Component to load and display your 3D model
-function Model({ modelPath }) {
+// Load and display my room.
+function Model({ modelPath }) 
+{
   const { scene } = useGLTF(modelPath);
+
+  scene.position.set(0, -5, 0);
+
   return <primitive object={scene} />;
 }
 
-// Main ModelViewer component
-function ModelViewer({ modelPath = "/models/Room.glb" }) {
+// Main Component.
+function ModelViewer({ modelPath = "/models/Room.glb" }) 
+{
   return (
     <div style={{ width: '100vw', height: '100vh' }}>
       <Canvas
-        camera={{ position: [0, 0, 5], fov: 75 }}
-        style={{ background: '#f0f0f0' }}
+        camera={{ position: [20, 10, -20], fov: 40 }}
       >
-        {/* Lighting */}
         <ambientLight intensity={0.5} />
         <directionalLight position={[10, 10, 5]} intensity={1} />
         
-        {/* Suspense for loading fallback */}
+        {/* Suspense for loading fallback. */}
         <Suspense fallback={null}>
           <Model modelPath={modelPath} />
         </Suspense>
