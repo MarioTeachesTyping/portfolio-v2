@@ -12,5 +12,7 @@ pnpm run dev
 ## Inspiration
 
 [Sooah's Portfolio](https://www.sooahs-room-folio.com/)
+
 [Rachel Wei's Portfolio](https://rachelqrwei.ca/)
-[Rafael Niebles](https://www.rnieb.dev/)
+
+[Rafael Niebles Portfolio](https://www.rnieb.dev/)
