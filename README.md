@@ -1,9 +1,16 @@
-# Portfolio V2
+# AJ's Portfolio V2
 
 2nd Version of my portfolio website. It's cooler.
 
-## How to Run
+## Instructions
 
-```pnpm install```
+```
+pnpm install
+pnpm run dev
+```
 
-```pnpm run dev```
+## Inspiration
+
+[Sooah's Portfolio](https://www.sooahs-room-folio.com/)
+[Rachel Wei's Portfolio](https://rachelqrwei.ca/)
+[Rafael Niebles](https://www.rnieb.dev/)
